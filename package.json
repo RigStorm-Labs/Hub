@@ -5,9 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "postbuild": "node scripts/copy-404.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "postbuild": "node scripts/copy-404.js"
   },
   "dependencies": {
     "clsx": "2.1.1",
@@ -26,7 +24,6 @@
     "@vitejs/plugin-react": "5.1.1",
     "tailwindcss": "4.1.17",
     "typescript": "5.9.3",
-    "vite": "7.3.2",
-    "gh-pages": "^5.0.0"
+    "vite": "7.3.2"
   }
 }
