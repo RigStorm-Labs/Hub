@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RigStorm Hub</title>
+  <meta name="robots" content="noindex">
+  <script>
+    // GitHub Pages SPA fallback: redirect clean URLs to the hash router.
+    // e.g. /Hub/companies/zeyora -> /Hub/#/companies/zeyora
+    (function () {
+      var parts = window.location.pathname.split("/").filter(Boolean);
+      // Drop the repo segment (first part) if this is a project page.
+      var repo = parts.length > 1 ? "/" + parts[0] : "";
+      var rest = parts.length > 1 ? parts.slice(1).join("/") : "";
+      var target = window.location.origin + repo + "/#/" + rest +
+        window.location.search + window.location.hash.replace(/^#/, "");
+      window.location.replace(target);
+    })();
+  </script>
+</head>
+<body></body>
+</html>
